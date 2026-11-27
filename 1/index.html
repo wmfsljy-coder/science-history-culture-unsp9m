@@ -50,7 +50,7 @@
         <section class="scene" data-title="새벽의 시리우스 — 365일 달력의 어긋남">
           <div class="story"><div class="who">📜</div><div class="say"><span class="name">신전의 천문 사제</span>“범람 무렵이면 한동안 보이지 않던 <b>시리우스</b>가 해 뜨기 직전 동쪽 하늘에 다시 나타난다네. 이 날을 새해로 삼아 1년을 <b>365일</b>로 세었지. 그런데 시리우스가 돌아오는 주기는 사실 <b>365¼일</b>쯤이야. 해가 갈수록 달력의 새해와 시리우스의 새벽은 얼마나 벌어질까?”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-sir" width="900" height="340"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-sir" width="900" height="340"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="sir-read"></div>
               <div class="ctrl-group">
@@ -103,6 +103,15 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk1"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>모형에서는</b> 시리우스가 새벽에 다시 보이는 날이 해마다 정확히 ¼일씩 늦어집니다. <b>실제로는</b> 그날이 관측 장소의 위도, 지평선 근처의 날씨와 대기 상태, 관측자의 눈에 따라 하루 이틀씩 달라질 수 있습니다. 그래서 1,460년이라는 주기도 계산으로 얻은 어림값입니다.</li>
+      <li><b>모형에서는</b> 시리우스가 나타나는 날과 범람이 함께 시작됩니다. <b>실제로는</b> 나일강의 범람은 상류 에티오피아 고원에 내리는 여름비 때문에 일어나고, 시작 날짜와 물 높이는 해마다 달랐습니다. 시리우스는 범람 시기를 알려 주는 신호였을 뿐 원인은 아닙니다.</li>
+      <li><b>모형의 밧줄은</b> 매듭 간격이 똑같고 늘어나지 않으며, 땅도 완전히 평평합니다. <b>실제 밧줄은</b> 당기는 힘과 습기에 따라 늘고 줄어 오차가 생깁니다. 이집트 측량사가 이런 밧줄로 직각을 만들었다는 직접 기록은 확실하지 않아 학자들 사이에 의견이 갈립니다.</li>
+      <li><b>카드 활동에서는</b> 다섯 문명을 나란히 놓았지만, <b>실제로는</b> 시대가 서로 크게 다릅니다. 예를 들어 마야 문명이 번성한 시기는 이집트에서 피라미드를 쌓던 시기보다 수천 년 뒤입니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다(1년 365일, 시리우스 주기 365¼일, 매듭 12개). 바탕 개념: 2022 개정 교육과정 「과학의 역사와 문화」 교과서의 고대 문명과 과학 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -134,7 +143,7 @@
           <div class="story"><div class="who">🧔</div><div class="say"><span class="name">에라토스테네스</span>“하짓날 정오, 남쪽 도시 <span data-place=27.65,31.4,6,rv>시에네</span>에서는 햇빛이 우물 바닥까지 곧게 비쳐 그림자가 없다네. 같은 시각 이곳 알렉산드리아에 세운 <b>1 m 막대</b>의 그림자를 재어 보게. 두 도시 사이는 약 <b>800 km</b>. 햇빛은 서로 나란하게 들어온다고 보자고.”</div></div>
           <figure class="hero-art"><img src="img/syene-well.webp" alt="고대 이집트 나일강 골짜기를 블록처럼 잘라 낸 모형. 왼쪽 마을의 돌우물은 앞면 단면에 깊은 갱도가 드러나 있고, 한낮의 햇빛 한 줄기가 갱도를 곧게 내려가 바닥의 물을 비춘다. 오른쪽 그리스풍 도시에는 높은 돌기둥이 서 있고, 그 곁에 흰 옷을 입은 학자가 무릎을 꿇고 앉아 있다." width="900" height="900" loading="lazy"><figcaption><b>하짓날 정오, 시에네의 우물에는 그림자가 없었습니다</b> 이집트 남쪽 도시 시에네에서는 하짓날 정오가 되면 햇빛이 깊은 우물 바닥의 물까지 곧게 비쳤다고 전해집니다. 같은 시각 북쪽으로 약 800 km 떨어진 알렉산드리아에 세운 막대에는 짧은 그림자가 생겼습니다. 같은 햇빛 아래에서 두 곳의 그림자가 왜 달랐는지, 그 차이로 무엇을 잴 수 있는지는 아래 모형에서 따져 볼 수 있습니다. <span class="art-note">⚠ 실제로 약 800 km 떨어진 두 곳을 한 블록에 모아 그렸습니다.</span></figcaption></figure>
           <div class="stage-card">
-            <div class="canvas-wrap" style="background:#e4eaf1"><canvas id="c-era" width="900" height="640"></canvas></div>
+            <div class="canvas-wrap" style="background:#e4eaf1" data-kind="model calc"><canvas id="c-era" width="900" height="640"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="er-read"></div>
               <div class="ctrl-group">
@@ -182,6 +191,16 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk2"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>모형에서는</b> 시에네가 알렉산드리아의 정남쪽에 있고 두 도시 사이를 800 km로 정했습니다. <b>실제로는</b> 두 도시의 경도가 약 3° 달라 정확히 남북으로 놓여 있지 않고, 좌표로 구한 거리도 800 km보다 조금 깁니다. 에라토스테네스가 거리를 어떻게 쟀는지, 그가 쓴 단위(스타디온)가 몇 m인지는 의견이 갈립니다.</li>
+      <li><b>모형에서는</b> 하짓날 정오 시에네에서 해가 머리 바로 위에 옵니다. <b>실제로는</b> 아스완(옛 시에네)이 북회귀선(약 북위 23.4°)보다 조금 북쪽(약 북위 24.1°)에 있어, 오늘날에는 하짓날 정오에도 해가 머리 꼭대기에서 0.6°쯤 비켜 있습니다.</li>
+      <li><b>모형에서는</b> 햇빛이 완전히 나란한 선으로 들어오고 그림자 끝이 또렷합니다. <b>실제 태양은</b> 하늘에서 지름 약 0.5°의 원반으로 보이기 때문에 그림자 끝이 흐릿하고, 이것이 측정 오차가 됩니다. 또 왼쪽 지구 단면의 각은 잘 보이도록 1.5배로 키워 그렸습니다.</li>
+      <li><b>모형의 지구는</b> 완전한 공입니다. <b>실제 지구는</b> 극 쪽이 아주 조금 납작해서 적도 둘레(약 40,075 km)와 남북으로 잰 둘레(약 40,008 km)가 조금 다릅니다.</li>
+      <li><b>월식 모형에서는</b> 지구 그림자가 가장자리가 또렷한 원이나 타원으로 그려집니다. <b>실제 월식에서는</b> 짙은 그림자(본그림자) 둘레에 옅은 그림자(반그림자)가 있어 가장자리가 흐릿하고, 지구 대기를 지나며 꺾인 붉은빛 때문에 달이 붉게 보입니다. 또 달에 닿는 지구 그림자는 달보다 두 배 넘게 커서, 한 번에 그림자 가장자리의 일부(호)만 보입니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 이야기 그림의 수치(거리 800 km, 막대 1 m)는 수업용으로 단순하게 정한 값입니다. 실제 자료 칸 「그림자로 잰 지구」: NASA 제트추진연구소(JPL) Horizons — 2025년 6월 21일 아스완과 알렉산드리아에서 본 태양의 가장 높은 고도, 두 도시 사이 거리는 좌표로 구한 대원 거리.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -235,7 +254,7 @@
         <section class="scene" data-title="우리 하늘의 시각 — 칠정산이 필요했던 까닭">
           <div class="story"><div class="who">👑</div><div class="say"><span class="name">세종</span>“명나라의 역법은 <span data-place=38.7,121.7,5,rv>베이징</span>의 하늘에 맞춘 것이다. 그 책대로 일식·월식 시각을 알리면 한양에서는 번번이 어긋나지 않느냐. 관측자를 <b>한양</b>으로 옮겨, 베이징 기준의 예보와 몇 분이나 차이 나는지 계산해 보아라.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-chil" width="900" height="330"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-chil" width="900" height="330"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="ch-read"></div>
               <div class="ctrl-group">
@@ -260,6 +279,15 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk3"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>모형에서는</b> 문제를 x² + 10x = 39 같은 식 기호로 적었습니다. <b>실제 알콰리즈미의 책은</b> 이런 기호 없이 문제와 풀이를 모두 말(문장)과 도형으로 설명했고, 양수인 답만 다루었습니다. 오늘날 쓰는 식 기호는 수백 년 뒤 유럽에서 자리 잡았습니다.</li>
+      <li><b>모형에서는</b> 베이징과 한양의 차이를 경도 차이에 따른 시각 차이 하나로만 계산합니다. <b>실제 칠정산은</b> 한양의 위도에 맞춘 해 뜨고 지는 시각, 절기, 일식·월식 계산까지 새로 다듬었고, 중국 역법을 바탕으로 한 내편과 이슬람 역법을 바탕으로 한 외편으로 이루어져 있습니다.</li>
+      <li><b>모형의 지구는</b> 북극 위에서 본 원판이고, 해시계 바늘은 하루 동안 똑같은 빠르기로 돕니다. <b>실제 해시계가 가리키는 시각은</b> 지구의 공전 궤도가 타원이고 자전축이 기울어져 있어, 고르게 가는 시계와 비교하면 계절에 따라 많게는 15분 넘게 앞서거나 늦어집니다.</li>
+      <li><b>전시실 활동에서는</b> 세 지역을 같은 시대처럼 나란히 놓았지만, <b>실제로는</b> 바그다드의 ‘지혜의 집’이 활발했던 때(9세기 무렵)와 세종 때(15세기)는 수백 년 떨어져 있고, 지식은 지역 사이를 오가며 서로 영향을 주었습니다. ‘지혜의 집’이 어떤 규모와 모습의 기관이었는지는 역사학자 사이에 의견이 갈립니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다(베이징 약 116.4°E, 한양 약 127°E는 오늘날 지도의 경도). 바탕 개념: 2022 개정 교육과정 「과학의 역사와 문화」 교과서의 중세 과학 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -301,7 +329,7 @@
         <section class="scene" data-title="원을 버릴 것인가 — 화성 궤도의 이심률">
           <div class="story"><div class="who">🧑‍🔬</div><div class="say"><span class="name">케플러</span>“하느님이 우주를 조화롭게 만들었다면, 그 조화는 관측값과 맞아야 한다. 원(이심률 0)에서 시작해 궤도를 조금씩 찌그러뜨려 보자. 티코의 기록과 가장 크게 어긋나는 차이가 <b>10분</b> 아래로 떨어지는 타원을 찾아라.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-kep" width="900" height="340"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-kep" width="900" height="340"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="kp-read"></div>
               <div>
@@ -334,6 +362,15 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk4"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>원근법 모형에서는</b> 그림 속 크기가 거리에 정확히 반비례한다고 보고, 눈높이나 기둥이 시선 한가운데서 얼마나 비켜 있는지는 따지지 않습니다. <b>실제 르네상스 화가들은</b> 소실점과 격자선을 그어 작도했고, 그림마다 원근법을 정확히 지킨 정도도 달랐습니다.</li>
+      <li><b>케플러 모형에서</b> ‘티코가 관측한 화성’으로 그린 점은 실제 관측 기록이 아니라, 오늘날 알려진 화성 궤도 이심률(약 0.093)의 타원으로 계산한 위치입니다. <b>실제 티코의 기록은</b> 맨눈 관측이라 측정값마다 오차가 있었고, 그 크기는 대개 2분 안팎이었다고 알려져 있습니다.</li>
+      <li><b>모형에서는</b> 태양에서 본 화성의 방향을 바로 비교합니다. <b>실제로는</b> 티코가 움직이는 지구 위에서 화성을 관측했기 때문에, 케플러는 지구의 궤도부터 알아낸 뒤에야 화성의 궤도를 구할 수 있었습니다.</li>
+      <li><b>모형의 원 궤도는</b> 태양을 한가운데 둔 가장 단순한 원입니다. 케플러가 원의 중심을 비켜 놓는 등 가장 잘 다듬은 원 모형도 몇몇 관측값과는 8분까지 어긋났습니다. 또 화성은 실제로 약 687일에 태양을 한 바퀴 도는데, 모형은 이를 훨씬 빠르게 보여 주며, 실제 궤도는 다른 행성의 인력 때문에 완전한 타원에서 조금씩 벗어납니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 이야기 그림의 수치는 수업용으로 정한 값이며, 화성의 이심률만 오늘날 값을 썼습니다. 실제 자료 칸 「각도 8′의 오차」: NASA JPL Horizons — 2020~2023년 화성의 태양 중심 위치(황도면, 10일 간격).</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -381,30 +418,30 @@
 </div>
 
 <button class="theme-toggle" id="themeToggle">라이트 모드</button>
-<script src="../assets/theme.js?v=c3418585"></script>
+<script src="../assets/theme.js?v=b0f7ed73"></script>
 <script src="../assets/scope.js?v=cecf172a"></script>
 <script src="../assets/kit.js?v=94e3bd47"></script>
 <script src="../assets/story.js?v=cd80882e"></script>
 <script src="../assets/quiz.js?v=d1e13494"></script>
-<script src="../assets/lab.js?v=5ab4e410"></script>
+<script src="../assets/lab.js?v=8e2a04e0"></script>
 <script src="../assets/share-config.js?v=437bf62e"></script>
 <script src="../assets/share.js?v=8ebc37fa"></script>
 <script src="../assets/account.js?v=435378ac"></script>
-<script src="episodes.js"></script>
-<script src="worked.js"></script>
-<script src="handoff.js"></script>
-<script src="quiz-items.js"></script>
+<script src="episodes.js?v=6687aadf"></script>
+<script src="worked.js?v=9ad3fa59"></script>
+<script src="handoff.js?v=95e148e4"></script>
+<script src="quiz-items.js?v=88d4f858"></script>
 <script src="../assets/review.js?v=c07fe051"></script>
 <script src="../assets/peer.js?v=b6f0b008"></script>
 <script src="../assets/qboard.js?v=b3bb8d32"></script>
-<script src="lab-cases.js"></script>
+<script src="lab-cases.js?v=0a653595"></script>
 <script src="../assets/link.js?v=48d3d217"></script>
-<script src="data/history-sky.js"></script>
-<script src="real-cases.js"></script>
+<script src="data/history-sky.js?v=b9efdec9"></script>
+<script src="real-cases.js?v=771b8ae2"></script>
 <script src="../assets/precheck.js?v=6e00687c"></script>
-<script src="precheck-items.js"></script>
-<script src="try-items.js"></script>
-<script src="scale-items.js"></script>
+<script src="precheck-items.js?v=dc9c208e"></script>
+<script src="try-items.js?v=4fa6a41a"></script>
+<script src="scale-items.js?v=caae6408"></script>
 <script src="https://wmfsljy-coder.github.io/science-teacher-hub-qtrqwc/assets/video-links.js" defer></script>
 </body>
 </html>

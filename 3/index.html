@@ -56,7 +56,7 @@
         <section class="scene" data-title="양자 도약의 진짜 크기">
           <div class="story"><div class="who">⚛️</div><div class="say"><span class="name">물리 선생님</span>“수소 원자 속 전자는 정해진 에너지 준위에만 있을 수 있어. 전자가 위 준위에서 둘째 준위(n = 2)로 뛰어내리는 것이 ‘양자 도약’이고, 그때 나오는 빛의 색으로 크기를 잴 수 있지. 수소가 내는 <b>붉은빛(656 nm)</b>이 나오는 도약을 찾아보렴. 그리고 그 에너지를 일상의 에너지와 비교해 봐.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-lv" width="900" height="340"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="a-c-lv" width="900" height="340"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="a-lv-read"></div>
               <div>
@@ -76,7 +76,7 @@
         <section class="scene" data-title="말의 이동 — 과학 용어 지도">
           <div class="story"><div class="who">📚</div><div class="say"><span class="name">국어 선생님</span>“과학 용어가 일상으로 건너가면 뜻이 조금씩, 때로는 <b>정반대로</b> 바뀌어. ‘양자’만 그런 게 아니야. 용어를 눌러 과학에서의 뜻과 일상에서의 쓰임을 비교하고, 뜻이 <b>크게 달라진 말</b>을 세 개 이상 찾아보렴.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-term" width="900" height="470"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="sketch"><canvas id="a-c-term" width="900" height="470"></canvas></div>
             <div class="controls" style="display:block">
               <div class="ctrl-label" style="margin-bottom:10px">용어를 골라 보세요</div>
               <div class="term-row" id="a-terms"></div>
@@ -90,7 +90,7 @@
         <section class="scene" data-title="시민 과학 — 몇 명이 모여야 믿을 만할까">
           <div class="story"><div class="who">🐦</div><div class="say"><span class="name">축제 기획 선배</span>“광고 대신 진짜 과학 문화 행사를 하자! 시민들이 함께 자료를 모으는 <b>시민 과학</b> — ‘우리 동네 새 세기’야. 그런데 한 사람이 센 수는 실제보다 30% 쯤 들쭉날쭉하대. 참가자들이 센 값을 평균 내면 오차가 줄어들 텐데, 평균의 오차 범위를 <b>± 10%</b> 안으로 만들려면 적어도 몇 명이 참가해야 할까?”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="a-c-cit" width="900" height="330"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="a-c-cit" width="900" height="330"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="a-cit-read"></div>
               <div class="ctrl-group">
@@ -121,6 +121,14 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk1"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>모형에서는</b> 수소 원자의 에너지 준위를 보어 모형의 식(−13.6 eV ÷ n²) 하나로 계산합니다. <b>실제로는</b> 전자를 원 궤도를 도는 작은 공이 아니라 확률 구름으로 설명하며, 정밀하게 재면 스펙트럼 선이 아주 조금씩 갈라져 있습니다. 붉은 선의 실제 측정값은 공기 중에서 약 656.3 nm입니다.</li>
+      <li><b>용어 지도의</b> ‘멀어진 정도’와 ‘쓰이는 정도’는 비교하려고 어림한 값입니다. <b>실제로</b> 말의 뜻이 얼마나 바뀌었는지는 사전과 많은 글을 모은 자료로 조사해야 하고, 사람과 분야에 따라서도 다릅니다.</li>
+      <li><b>시민 과학 모형에서는</b> 참가자가 센 값이 서로 영향을 주지 않고, 참값(수업용으로 정한 120마리) 둘레에 고르게 흩어진다고 봅니다. <b>실제로는</b> 비슷한 새를 헷갈리거나 같은 새를 두 번 세는 것처럼 모두가 같은 쪽으로 틀리는 오차가 있어, 이런 오차는 참가자를 늘려도 줄지 않습니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다(한 사람이 센 값의 흩어짐 30%, 참값 120마리). 수소 에너지 준위 식과 13.6 eV는 교과서에 실린 값입니다. 바탕 개념: 2022 개정 교육과정 「과학의 역사와 문화」 교과서의 과학 문화 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -231,6 +239,14 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk2"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>모형에서는</b> 1~8배음의 세기가 처음부터 끝까지 변하지 않는 소리를 만듭니다. <b>실제 악기 소리는</b> 소리가 시작될 때와 사라질 때 배음의 세기가 계속 변하고, 피아노 줄처럼 배음이 정확한 정수배에서 조금 벗어나기도 합니다. 클라리넷의 짝수 배음이 약한 특징도 주로 낮은 음역에서 뚜렷합니다.</li>
+      <li><b>표본화 모형에서는</b> 20 kHz 소리 하나만 잽니다. <b>실제 녹음에서는</b> 여러 진동수가 섞인 소리를 재기 전에 너무 높은 소리를 걸러 내는 장치를 거치고, 잰 값 하나하나를 몇 단계로 나누어 저장하는지(CD는 16비트)도 음질을 정합니다. 사람이 들을 수 있는 가장 높은 소리도 나이가 들수록 낮아집니다.</li>
+      <li><b>작곡 인공지능 모형은</b> 동요 한 곡을 배워 앞의 두 음만 보고 다음 음의 높이를 고르며, 음의 길이(리듬)와 화음은 다루지 않습니다. <b>실제 작곡 인공지능은</b> 수많은 곡과 긴 흐름을 배웁니다. 인공지능이 만든 곡의 저작자를 누구로 볼지는 나라마다 판단이 달라 논의가 이어지고 있습니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다(기본음 440 Hz, 배음 세기 막대값). CD 표본화 주파수 44.1 kHz는 널리 알려진 규격값입니다. 바탕 개념: 2022 개정 교육과정 「과학의 역사와 문화」 교과서의 과학기술과 음악 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -256,7 +272,7 @@
         <section class="scene" data-title="몰입의 조건 — 시야와 지연">
           <div class="story"><div class="who">🛠️</div><div class="say"><span class="name">기기 제조사 기술자</span>“가상현실이 진짜 같으려면 두 가지가 필요해요. <b>시야를 얼마나 덮는가</b>, 그리고 <b>고개를 돌렸을 때 화면이 얼마나 빨리 따라오는가</b>. 두 값을 바꿔 보며 멀미 위험이 ‘낮음’이 되는 조건을 찾아 주세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-vr" width="900" height="470"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-c-vr" width="900" height="470"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">기기의 시야각 <span class="val" id="c-fv">60°</span></div>
@@ -284,7 +300,7 @@
         <section class="scene" data-title="원격 조종의 한계 — 빛도 느릴 때가 있다">
           <div class="story"><div class="who">🤖</div><div class="say"><span class="name">원격 로봇 연구원</span>“기계와 사람을 잇는 기술은 가상 교실에서 끝나지 않아요. 멀리 있는 로봇 팔을 손처럼 움직이는 원격 조종도 같은 문제를 겪지요. 신호는 광섬유 속을 1초에 약 <b>20만 km</b> 달리고, 명령이 가서 영상이 돌아오는 <b>왕복 지연</b>이 20 ms를 넘으면 손과 로봇이 어긋나요. 처리 시간 5 ms를 더해서, 원격 조종이 가능한 <b>가장 먼 거리</b>를 찾아 주세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="c-c-tele" width="900" height="320"></canvas></div>
+            <div class="canvas-wrap studio" data-kind="model calc"><canvas id="c-c-tele" width="900" height="320"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="c-tele-read"></div>
               <div>
@@ -318,6 +334,15 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk3"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>모형에서는</b> 멀미 위험을 시야각과 화면 지연 두 가지로만 정하고, 고개를 돌리는 빠르기를 초당 200°로 고정했습니다. <b>실제로는</b> 화면이 1초에 몇 번 바뀌는지, 두 눈 사이 거리에 맞춘 렌즈 조정, 가상 공간에서 움직이는 방식, 사람마다 다른 예민함이 함께 영향을 줍니다.</li>
+      <li><b>멀미 위험의 구간</b>(낮음·보통·높음)은 비교를 위해 정한 기준입니다. 실제로 같은 기기에서도 멀미를 느끼는 정도는 사람마다 크게 다릅니다.</li>
+      <li><b>원격 조종 모형에서는</b> 신호가 곧게 뻗은 광섬유를 1초에 약 20만 km로 달리고, 처리 시간은 5 ms로 늘 같다고 봅니다. <b>실제 통신망은</b> 땅과 바다를 돌아가는 길로 연결되고 여러 장비를 거쳐 지연이 더 길며, 그때그때 달라집니다.</li>
+      <li><b>왕복 지연 20 ms라는 기준도</b> 작업 종류에 따라 달라서, 사람이 견딜 수 있는 지연은 연구마다 다르게 보고됩니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 그림의 수치는 수업용으로 정한 값입니다(사람 시야 약 200°, 광섬유 속 신호 약 20만 km/s, 도시 사이 거리는 어림값). 바탕 개념: 2022 개정 교육과정 「과학의 역사와 문화」 교과서의 가상현실·증강현실, 연결하는 과학기술 내용.</p>
+      </details>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
 
@@ -343,7 +368,7 @@
           <div class="story"><div class="who">📏</div><div class="say"><span class="name">환경 공학자</span>“토론에 앞서 사실부터 확인합시다. 이 발전기가 내는 소리의 힘(음향 파워 레벨)은 107 dB(A)이고, 소리는 멀어질수록 퍼지면서 약해져요. 밤에 집 안에서 잠을 방해하지 않으려면 집 앞 소음이 <b>45 dB 이하</b>여야 합니다. 발전기를 집에서 <b>최소</b> 얼마나 떨어뜨려야 할까요? 너무 멀리 두면 세울 곳이 없어지니 가장 가까운 거리를 찾아 주세요.”</div></div>
           <figure class="hero-art"><img src="img/wind-village.webp" alt="산골 마을을 블록처럼 잘라 낸 모형. 뒷산 숲 능선 꼭대기에 흰 풍력 발전기 한 대가 서 있고, 비탈 아래 골짜기에는 논밭과 길, 지붕 색이 다른 집들이 모인 마을이 있다. 앞면 단면에는 겉흙과 자갈, 바위층이 보인다." width="900" height="900" loading="lazy"><figcaption><b>풍력 발전기 소리는 대부분 날개가 바람을 가르는 소리입니다</b> 큰 풍력 발전기의 날개 끝은 시속 200 km를 훌쩍 넘는 빠르기로 돌며 ‘쉭, 쉭’ 하는 소리를 냅니다. 이 소리는 사방으로 퍼져 나가면서 점점 약해집니다. 마을의 집을 얼마나 떨어뜨려야 밤잠을 방해하지 않는지는 아래 모형에서 직접 찾아보세요. <span class="art-note">⚠ 발전기와 마을 사이의 거리는 실제 비율이 아닙니다.</span></figcaption></figure>
           <div class="stage-card">
-            <div class="canvas-wrap" style="background:#e4eaf1"><canvas id="d-c-noise" width="900" height="680"></canvas></div>
+            <div class="canvas-wrap" style="background:#e4eaf1" data-kind="model calc"><canvas id="d-c-noise" width="900" height="680"></canvas></div>
             <div class="sim-side">
               <div class="readout" id="d-noise-read"></div>
               <div>
@@ -363,7 +388,7 @@
         <section class="scene" data-title="함께 정하기 — 누구의 말을 듣는가">
           <div class="story"><div class="who">🗣️</div><div class="say"><span class="name">토론 진행자(나)</span>“사실을 알아도 결론은 저절로 나지 않아요. 전기 요금, 소음, 경관, 마을 소득 가운데 <b>무엇을 더 중요하게 볼지</b>는 사람마다 다르니까요. 주민 120명의 의견이 토론을 거치며 어떻게 달라지는지 두 가지 진행 방식으로 실험해 보세요.”</div></div>
           <div class="stage-card">
-            <div class="canvas-wrap studio"><canvas id="d-c-op" width="900" height="450"></canvas></div>
+            <div class="canvas-wrap studio" data-kind-pos="br"><canvas id="d-c-op" width="900" height="450"></canvas></div>
             <div class="controls">
               <div class="ctrl-group">
                 <div class="ctrl-label">토론 라운드 <span class="val" id="d-rv">0회</span></div>
@@ -409,6 +434,14 @@
           <div class="stage-card" style="padding:6px 0 4px;margin-top:16px"><div id="wk4"></div></div>
         </section>
       </div>
+      <details class="model-gap"><summary>🔍 이 모형이 실제와 다른 점</summary>
+      <ul>
+      <li><b>소음 모형에서는</b> 발전기를 한 점의 소리로 보고, 소리가 모든 방향으로 고르게 퍼지며 거리만으로 약해진다고 계산합니다. <b>실제로는</b> 바람의 방향과 세기, 산과 골짜기 같은 지형, 공기의 흡수, 여러 대의 발전기가 함께 영향을 주고, 주변의 바람 소리 같은 배경 소음과 섞여 들립니다.</li>
+      <li><b>모형에서 쓴 45 dB 기준은</b> 이야기에서 정한 값입니다. 실제 소음 기준은 나라와 지역, 낮과 밤에 따라 다릅니다. 풍력 발전기의 낮은 소리(저주파 소음)가 직접 몸을 해친다는 근거는 아직 뚜렷하지 않지만, 성가심이나 잠을 설치는 것과의 관계는 연구마다 다르게 보고됩니다.</li>
+      <li><b>의견 모형에서는</b> 주민 120명이 라운드마다 다섯 사람의 의견을 듣고 정해진 규칙대로 조금씩 움직입니다. <b>실제 토론에서는</b> 정보를 얼마나 믿는지, 보상 같은 이해관계, 발언 기회의 차이도 의견에 영향을 주며, 집단 극화가 얼마나 일어나는지는 상황과 연구에 따라 다릅니다.</li>
+      </ul>
+      <p class="gap-src"><b>자료 출처</b> · 이야기 그림의 수치(발전기 음향 파워 107 dB(A), 주민 120명)는 수업용으로 정한 값입니다. 실제 자료 칸: Our World in Data 에너지 자료(Energy Institute 『세계 에너지 통계』, Ember 등을 모은 것) — 나라별 전기 생산 가운데 풍력·태양광의 비율과 발전량, 기상청 날씨누리 과거 관측 일별 자료(창원) — 군항제 날짜 사례.</p>
+      </details>
       <div class="sec-more" data-tag="🗳 근거 카드 토론" data-title="신고리 5·6호기 공론화처럼 — 시민 참여단이 되어 근거로 판단하기"><div id="debate"></div></div>
       <p class="teacher-note">교사용: 주소 끝에 <a href="?open=1">?open=1</a>을 붙이면 교사 미리 보기로 열립니다.</p>
     </section>
@@ -456,35 +489,35 @@
 </div>
 
 <button class="theme-toggle" id="themeToggle">라이트 모드</button>
-<script src="../assets/theme.js?v=c3418585"></script>
+<script src="../assets/theme.js?v=b0f7ed73"></script>
 <script src="../assets/scope.js?v=cecf172a"></script>
 <script src="../assets/kit.js?v=94e3bd47"></script>
 <script src="../assets/story.js?v=cd80882e"></script>
 <script src="../assets/quiz.js?v=d1e13494"></script>
-<script src="../assets/lab.js?v=5ab4e410"></script>
+<script src="../assets/lab.js?v=8e2a04e0"></script>
 <script src="../assets/share-config.js?v=437bf62e"></script>
 <script src="../assets/share.js?v=8ebc37fa"></script>
 <script src="../assets/account.js?v=435378ac"></script>
-<script src="episodes.js"></script>
-<script src="worked.js"></script>
-<script src="handoff.js"></script>
-<script src="quiz-items.js"></script>
+<script src="episodes.js?v=fa0e50f7"></script>
+<script src="worked.js?v=924cb3e8"></script>
+<script src="handoff.js?v=48c53e3e"></script>
+<script src="quiz-items.js?v=1139605f"></script>
 <script src="../assets/review.js?v=c07fe051"></script>
 <script src="../assets/peer.js?v=b6f0b008"></script>
 <script src="../assets/qboard.js?v=b3bb8d32"></script>
-<script src="lab-cases.js"></script>
+<script src="lab-cases.js?v=7e9937cf"></script>
 <script src="../assets/inquiry.js?v=405fc23c"></script>
-<script src="inquiry-items.js"></script>
+<script src="inquiry-items.js?v=2c8394ac"></script>
 <script src="../assets/link.js?v=48d3d217"></script>
-<script src="data/owid-wind-solar.js"></script>
-<script src="data/bloom.js"></script>
-<script src="real-cases.js"></script>
+<script src="data/owid-wind-solar.js?v=71ddef48"></script>
+<script src="data/bloom.js?v=a4982e17"></script>
+<script src="real-cases.js?v=75374070"></script>
 <script src="../assets/precheck.js?v=6e00687c"></script>
-<script src="precheck-items.js"></script>
+<script src="precheck-items.js?v=b301c2e6"></script>
 <script src="../assets/debate.js?v=fca9566b"></script>
-<script src="debate-items.js"></script>
-<script src="try-items.js"></script>
-<script src="scale-items.js"></script>
+<script src="debate-items.js?v=bc74b76e"></script>
+<script src="try-items.js?v=c756a45f"></script>
+<script src="scale-items.js?v=f3097a4e"></script>
 <script src="https://wmfsljy-coder.github.io/science-teacher-hub-qtrqwc/assets/video-links.js" defer></script>
 </body>
 </html>
